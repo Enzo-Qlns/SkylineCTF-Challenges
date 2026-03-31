@@ -1,0 +1,65 @@
+apiVersion: skyline.local/v1
+kind: CTFChallenge
+metadata:
+    name: azure-blob
+    namespace: ctfd
+spec:
+    name: Azure-Blob
+    description: |
+        -----BEGIN PGP MESSAGE-----
+
+        hQIMA4Wg+3KzyZPEARAAgB6CSb8A5Qqv1j0vgIzC6ulBWNOn/txnPpjLKdKK0aC3
+        JqTKCylkeGB9t1+5SwnoWlcU3t4aRarWp9oExkWtB8Gcg0WFbDpqkTDQYBaUHMaN
+        9XnzI2x1hkx6WLW6/+hhtAXyBmkuu/P6FRCpFbvhbGrvh3z534GoDxT7EkC71o4c
+        i8RIF7lzcgPyKzpKbnxZK6bwXqkypMAnaRtE6KFZRQpA1DGkPk3qk6vbgDHyODvs
+        WPzcjMjq366wOMLA8OXUZhl0QRVH78I+aSnF+xO6nUFs9xg/FVNoREHVScnapth8
+        IPVsj10tr7CTHQn2Ebehlc6OCH4MhdFAx7UdIlgI7V/mGeMGQ1Wxc2FvatOCQEzQ
+        EJ0TLkFXXLG9AqCWlgUVJk9/HQxTqdqZuAymnSy1YeTXPxttjJJrunloGa7S+K3S
+        uNjNAt5CAYsep+ng9eZq0Z38LsV6dk+oOrHYvQhybrgqRppJOKnCkT9zD9lLSXNy
+        ifZX9pLcT0OaD7Bro3yeqP98afumdviYj5iA+520hzShKahDase9QC1hy2OFjdH0
+        VpQ4bMjtrmmFPJuK11k922FaWHEv9SWuZ5xE+nzO/25VDoeEQgMZe8LgyrTB3b3f
+        I0VdOMIKb2f2dMvSCAMpNB/+wwdY8saozNX/UNpncyrailW0XIGfQKPAGLLxMKnS
+        wEMBF55UO3F9kemvSHzenMJKKjT/ndjTs8su6CP8LkOnZy5b12GThMfJb+wHFlS8
+        Z3muxEwGwpmO1JqocqcOt1PZ2Kx0rB7IaSBsgK73++0mSMndLz1szSmeyFuCIWgw
+        rKz7/ArDglHM6UOq91oNMdBEHtjCjvc/mmkxsm3zwE+gzTEnzryO+cHEp/r0dLid
+        oFR/NhnHHIixSjACZ8qFJ54vooULBuZ5gU8Z6N4T858OQTo6akPXJSmNXdrudRyA
+        xyXVamwDFJzS5czkFGA9B2lk018jza7z1XSqCItV7VONwaE1DQNbPnLIWaDrUd3V
+        eMQJnL4K5axXLS6rV6z70IfYTtW0
+        =5wsq
+        -----END PGP MESSAGE-----
+    category: Azure
+    type: standard
+    points: 400
+    creator: Processus Thief
+    flag: ENC[AES256_GCM,data:4NJbtwyzu4/Yq6CNUI6dWG02Z+ddbfCIqv5Tvmp0xqjs,iv:U4glNs7B/+S6y0QFY2eqlm6K2gjX3F96JWijDZMLXQY=,tag:S79VklO8PpL6HZUI8uMVgg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2026-03-31T08:18:47Z"
+    mac: ENC[AES256_GCM,data:tbE+pZt3b5+wcXuHiLRW1ydMxwXx0HyEQso2ExvY/nLBGGEgwNQc/YmmQMSkRbo7nODhqHV0E5m1GFnvgB42S665dvr8F8+7rZ37MMzQVEGqqjpVN/AyNVXtsFFZEBd9j27y8rjyxLKiVWo1lRPme8eZfttRKVHzWReZGb74gKM=,iv:Ckv3rpDBJv2KIweBwE7rhTUx1fp7RFFv8Lg8dQrzr44=,tag:AQ72MbRJZJwLgxijf7tZxQ==,type:str]
+    pgp:
+        - created_at: "2026-03-31T08:18:47Z"
+          enc: |-
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA4Wg+3KzyZPEARAAyXyJmGYQ7vsfC55eYkT0f7Cv3DuHXNQwDUz9JJ9HA8/x
+            tYOj/1XzRANG8lEFN7FFzJt/fEEcOd+XzEAHvQD+OlCCeUYen/VMd8BqbQCgpC9N
+            +e2fxRidJj1BJ6lCO+xLvFzQQ4JkFqLv0Lgb261hdn9n7sF5fgSgG8VMeIkc6BSV
+            Btpls46FM9Dg/MOKI7v8JbDP6uOuFiQoJysXnTlh9gDUf3lOkVGbCnuCFZrhudm1
+            u7FhDIxyx9W+p/XKKD/Gf/Pz3Us4vtaMmExkA4T9P9NeTOFQr0OBG5Sr4LV1lOul
+            jCuRQdYmhAuAVe5HT8NL3+YMqCCxZAX1fndLCmn55pWK5YZfasVwmwtLrbyNL4sT
+            IY4qrsyjWsw2h/hzE+ka9CaFHvjhV2k9gdaNfYFUcgKQxpx3oJrK5MnFvnivqi7L
+            Kco4or/WbgBxdadVPcFjDrKPSPDsVLbcUqMIqGYHmDC7qwPU7/RsR6UIcfyZFPS4
+            Tm5AV1VKAq/l0NGAfEFcjRbDfqYwvxyiwYZFChuAVLUHht22at7rygP3W/pc80VL
+            kbxFLAw/vFXadEsKAz9O/01lR3Xtli13CsadA7+iupvtpDthCjhsaCoiFgdS9DpT
+            FqvoHCrqx83MAlvW+PG7Yj5jLw9uNDsmXkBV4FBvOADmyEQJv2Mkf00s8pG3B1fS
+            XAGKL9FseyCPs2OFnaqKN0xLfWAYNeNWLx17zJf8UeaQ1HRoFhXvSc+O5PatUPWG
+            nSHdRXdDgKVYp7f6UHdjua/wu5BeZm4vi0eD6rIqe4rnqEKPF94lWAjcH9Gt
+            =/Mkn
+            -----END PGP MESSAGE-----
+          fp: 2F678007F08254265530095FB5B68F8BCE0CB069
+    encrypted_regex: ^(data|stringData|flag|password|secret)$
+    version: 3.8.1
