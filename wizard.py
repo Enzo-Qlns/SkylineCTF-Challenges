@@ -331,6 +331,12 @@ def create_challenge():
         desc_lines.append(line)
     description = "\n".join(desc_lines) if desc_lines else "Description du challenge."
 
+    # 4b. Encrypt description (GPG)
+    encrypt_desc = questionary.confirm("Chiffrer la description avec GPG ?", default=False, style=custom_style).ask()
+    if encrypt_desc:
+        rprint("   [yellow]Chiffrement de la description avec GPG...[/yellow]")
+        description = gpg_encrypt_string(description)
+
     # 5. Category
     category = questionary.text(
         "Catégorie :",
@@ -545,6 +551,23 @@ def encrypt_standalone_file(file_path):
     else:
         rprint(f"[red]Échec du chiffrement : {status.status}[/red]")
     rprint(status.stderr)
+
+def gpg_encrypt_string(text):
+    """Encrypts a string using GPG (armored)."""
+    import gnupg
+    gpg = gnupg.GPG()
+    # Explicitly encode to utf-8 before encryption to avoid platform encoding issues
+    status = gpg.encrypt(
+        text.encode("utf-8"),
+        recipients=[FINGERPRINT],
+        always_trust=True,
+        armor=True
+    )
+    if status.ok:
+        return str(status)
+    else:
+        rprint(f"[red]Erreur lors du chiffrement GPG de la description : {status.status}[/red]")
+        return text
 
 def run_wizard(target_folder):
     """Interactive wizard to secure a challenge folder."""
